@@ -1,5 +1,11 @@
+import { SignCard } from "./components";
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <main className="main">
+      <SignCard />
+    </main>
+  );
 }
 
 export default App;
