@@ -1,4 +1,4 @@
-import { IconList, ImageDesktopSignUp, ImageMobileSignUp } from "../../assets";
+import { IconList } from "../../assets";
 
 // css
 import "./SignCard.css";
@@ -44,13 +44,7 @@ function SignCard() {
         </form>
       </div>
       <div className="card__image-container">
-        <img
-          srcSet={`${ImageDesktopSignUp} 1440w, ${ImageMobileSignUp} 375w`}
-          sizes="(max-width: 375px) 100vw, 1440px"
-          src={ImageDesktopSignUp}
-          alt="Responsive Image"
-          className="card__image"
-        />
+        <div className="card__image" />
       </div>
     </article>
   );

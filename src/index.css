@@ -55,11 +55,3 @@ button {
 input::placeholder {
   font: inherit;
 }
-
-/* MAIN */
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
