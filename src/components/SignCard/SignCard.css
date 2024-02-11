@@ -96,5 +96,61 @@
 }
 
 @media (min-width: 768px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
+  .card {
+    border-radius: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+
+    padding: 2.5rem 2.5rem;
+    padding-left: 4rem;
+  }
+
+  .card__text-container {
+    order: 1;
+  }
+
+  .card__main-title {
+    font-size: 5rem;
+  }
+
+  .card__main-sibtitle {
+    font-size: 1.4rem;
+    width: 90%;
+  }
+
+  .list__item {
+    font-size: 1.2rem;
+  }
+
+  .form__input {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+
+  .btn--signup:is(:hover, :active) {
+    background-color: hsl(234, 29%, 20%, 0.9);
+  }
+
+  .card__image-container {
+    height: 100%;
+    order: 2;
+  }
+
+  .card__image {
+    background-image: url(public/assets/illustration-sign-up-desktop.svg);
+    background-position: top right;
+    border-radius: 1rem;
+    background-size: contain;
+  }
 }
