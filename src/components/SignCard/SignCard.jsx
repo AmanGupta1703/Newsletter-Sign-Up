@@ -1,33 +1,16 @@
-import { useReducer } from "react";
 import { IconList } from "../../assets";
 
 // css
 import "./SignCard.css";
 import { useState } from "react";
 
-const initialState = { email: "", error: null };
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "user/new_signup":
-      return { ...state, email: action.payload, error: null };
-    case "user/no_email":
-      return { ...state, error: action.payload };
-    default:
-      return state;
-  }
-}
-
-function SignCard() {
-  const [{ email, error }, dispatch] = useReducer(reducer, initialState);
-
+function SignCard({ error, dispatch }) {
   const [emailAddress, setEmailAddress] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
 
     if (!emailAddress) {
-      console.log(1);
       dispatch({ type: "user/no_email", payload: "Valid email required." });
       return;
     }
@@ -38,7 +21,6 @@ function SignCard() {
 
   function handleEmailChange(e) {
     setEmailAddress(e.target.value);
-    dispatch({ type: "user/new_signup", payload: emailAddress });
   }
 
   return (

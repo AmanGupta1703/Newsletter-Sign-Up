@@ -1,6 +1,10 @@
 .card {
-  color: var(--color-neutral-02);
   background-color: var(--color-white);
+}
+
+.card--signup {
+  color: var(--color-neutral-02);
+
   font-size: 1.2rem;
 
   display: flex;
@@ -74,7 +78,7 @@
 }
 
 .card__image {
-  background-image: url(public/assets/illustration-sign-up-mobile.svg);
+  background-image: url(/assets/illustration-sign-up-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -83,7 +87,7 @@
 }
 
 @media (min-width: 375px) and (max-width: 426px) {
-  .card {
+  .card--signup {
     border-radius: 1rem;
     max-width: 32rem;
     margin: 2rem auto;
@@ -148,7 +152,7 @@
   }
 
   .card__image {
-    background-image: url(public/assets/illustration-sign-up-desktop.svg);
+    background-image: url(/assets/illustration-sign-up-desktop.svg);
     background-position: top right;
     border-radius: 1rem;
     background-size: contain;
